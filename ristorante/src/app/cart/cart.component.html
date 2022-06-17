@@ -1,0 +1,28 @@
+<h3>Your Cart</h3>
+<div class="main">
+    <div class="cart-item" *ngFor="let item of items">
+        <div class="card card1" style="width: 40%;">
+            <img src="/assets/pictures/{{ item.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.desc1 }}</p>
+                <h5>€ {{ item.price }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <div>
+    <h5>
+      Name
+    </h5>
+    <input id="name" type="text" formControlName="name">
+  </div>
+  <div>
+    <h5>
+      Address
+    </h5>
+    <input id="address" type="text" formControlName="address">
+  </div>
+  <button class=" btn btn-warning" type="submit">Purchase</button>
+ </form>

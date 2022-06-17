@@ -1,0 +1,15 @@
+.home-main{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    gap: 2em;
+}
+
+.name{
+    font-size: 5em;
+    color: black;
+    font-family: segoe script;
+    font-weight: 900;
+    margin-top: 50px;
+    text-shadow: 5px 5px 5px rgb(110, 6, 6);
+}

@@ -1,0 +1,14 @@
+<h2>Details</h2>
+
+<div *ngIf="dish">
+    <div class="card" style="width: 100%;">
+        <img src="/assets/pictures/{{ dish.image }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ dish.name }}</h5>
+            <p class="card-text">{{ dish.desc1 }}</p>
+            <p class="card-text">{{dish.desc2 }}</p>
+            <h5>€ {{ dish.price }}</h5>
+            <a (click)="addToCart()" class="btn btn-primary">Order</a>
+        </div>
+    </div>
+</div>

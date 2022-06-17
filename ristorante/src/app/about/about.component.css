@@ -1,0 +1,29 @@
+.about-main{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 6em;
+}
+
+.sub1, .sub2 {
+display: flex;
+margin: 6em;
+justify-content: space-evenly;
+gap: 3em;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sub1 h2, .sub2 h2{
+    color: goldenrod;
+}
+
+.text p {
+    font-size: 20px;
+}

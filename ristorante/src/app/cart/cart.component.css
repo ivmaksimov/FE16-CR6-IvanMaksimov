@@ -1,0 +1,11 @@
+.card1{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

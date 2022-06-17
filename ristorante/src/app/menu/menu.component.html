@@ -1,0 +1,18 @@
+<h2>MENU</h2>
+<div class="main">
+    <div *ngFor="let dish of dishes ; index as dishId" style="width: 30%;" >
+        <div class="card" style="width: 100%;">
+            <img src="/assets/pictures/{{ dish.image }}" class="card-img-top" alt="...">
+            <div class="">
+                <h5 class="card-title p-2">{{ dish.name }}</h5>
+                <p class="card-text p-2">{{ dish.desc1 }}</p>
+                <div class="price ">
+                    <p class="card-text p-2 " >€ {{ dish.price }}</p>
+                </div>
+                <a routerLink="/dishes/{{dishId}}"  class="btn m-2 btn-primary">Details</a>
+                <a (click)="addToCart()" class="btn m-2 btn-success">Order</a>
+            </div>
+        </div>
+    </div>
+</div>
+
