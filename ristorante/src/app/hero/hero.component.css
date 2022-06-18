@@ -8,6 +8,7 @@
 
 .hero-h1{
     color: white;
+    text-shadow: 5px 5px 5px black;
 }
 
 .hero-name{
@@ -17,4 +18,24 @@
     font-weight: 900;
     margin-top: 50px;
     text-shadow: 5px 5px 5px black;
+}
+
+@media screen and (min-width: 768px) and (max-width:991.999px) {
+    .hero-name{
+        font-size: 3.5em; 
+    }
+
+    .hero-h1{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 767.999px) {
+    .hero-name{
+        font-size: 2.5em; 
+    }
+
+    .hero-h1{
+        font-size: 1em;
+    }
 }

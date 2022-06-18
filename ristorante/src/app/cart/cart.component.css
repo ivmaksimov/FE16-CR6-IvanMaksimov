@@ -1,4 +1,5 @@
 .card1{
+    width: 70%;
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -8,4 +9,36 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+
+.bg{
+    width: 300px;
+    background-color: antiquewhite;
+}
+
+.formname{
+    font-size: 5em;
+    color: black;
+    font-family: segoe script;
+    font-weight: 900;
+    margin-top: 50px;
+    text-shadow: 5px 5px 5px rgb(110, 6, 6);
+}
+
+@media screen and (min-width: 768px) and (max-width:991.999px) {
+    .formname{
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 767.999px) {
+    .cart1{
+        flex-direction: column;
+    }
+    .formname{
+        font-size: 3em;
+    }
+    .card1{
+        flex-direction: column;
+    }
 }

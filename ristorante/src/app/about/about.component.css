@@ -3,20 +3,34 @@
     color: white;
     text-align: center;
     margin-top: 6em;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.about-sub{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
 .sub1, .sub2 {
 display: flex;
 margin: 6em;
-justify-content: space-evenly;
-gap: 3em;
+width: 85%;
+justify-content: space-between;
+}
+
+img{
+    width: 40%;
 }
 
 .text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     
 }
 
@@ -26,4 +40,30 @@ gap: 3em;
 
 .text p {
     font-size: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width:991.999px) {
+    img {
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 767.999px)  {
+    img {
+        width: 80%;
+    }
+
+    .sub1, .sub2 {
+        display: flex;
+        flex-direction: column;
+        margin: 6em;
+        width: 80%;
+       
+        
+        }
+    
+        .text{
+            width: 80%;
+        }
 }

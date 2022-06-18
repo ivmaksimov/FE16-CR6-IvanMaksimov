@@ -13,3 +13,12 @@
     margin-top: 50px;
     text-shadow: 5px 5px 5px rgb(110, 6, 6);
 }
+
+@media screen and (max-width: 991.999px) {
+    .home-main{
+        flex-direction: column;
+    }
+    .name{
+        font-size: 2em;
+    }
+}

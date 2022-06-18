@@ -1,28 +1,48 @@
-<h3>Your Cart</h3>
-<div class="main">
-    <div class="cart-item" *ngFor="let item of items">
-        <div class="card card1" style="width: 40%;">
-            <img src="/assets/pictures/{{ item.image }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ item.name }}</h5>
-                <p class="card-text">{{ item.desc1 }}</p>
-                <h5>€ {{ item.price }}</h5>
+<div>
+  <h3 class="bg">Your Cart - {{items.length}} item(s)</h3>
+  <div class="cart1 d-flex">
+    <div class="main">
+        <div class="cart-item" *ngFor="let item of items">
+            <div class="card card1">
+                <img src="/assets/pictures/{{ item.image }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.desc1 }}</p>
+                    <h5>€ {{ item.price }}</h5>
+                </div>
             </div>
         </div>
     </div>
+    <div>
+    <div class="col-lg-5 col-md-5 col-sm-11 m-1">
+      <h3 class="bg">Summary</h3>
+      <hr class="hrshort">
+      <p>Products: €{{roundTo(itemPrice, 2)}}</p>
+      <p>Service: €{{roundTo(serviceFee, 2)}}</p>
+      <p>Discount: €{{roundTo(discount, 2)}}</p>
+      <hr class="hrshort">
+      <p ><b>Total price (incl. VAT):</b></p>
+      <h4>€{{roundTo(totalPrice, 2)}}</h4>
+    </div>
+    <h3 class="formname">Order Form</h3>
+    <p>please fill up the info for the delivery</p>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <div>
+        <h5>
+          Name
+        </h5>
+        <input id="name" type="text" formControlName="name">
+      </div>
+      <div>
+        <h5>
+          Address
+        </h5>
+        <input id="address" type="text" formControlName="address">
+      </div>
+      <button class=" btn btn-warning" type="submit">Purchase</button>
+     </form>
+  </div>
 </div>
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  <div>
-    <h5>
-      Name
-    </h5>
-    <input id="name" type="text" formControlName="name">
-  </div>
-  <div>
-    <h5>
-      Address
-    </h5>
-    <input id="address" type="text" formControlName="address">
-  </div>
-  <button class=" btn btn-warning" type="submit">Purchase</button>
- </form>
+
+
+</div>

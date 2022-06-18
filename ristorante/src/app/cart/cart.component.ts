@@ -18,6 +18,39 @@ export class CartComponent implements OnInit {
 
   constructor(private cartService: CartService, private fb: FormBuilder) { }
 
+  get itemPrice(): number{
+    let total: number = 0;
+    for(const item of this.items){
+      total += item.price;
+    }
+    return total;
+  }
+
+  get serviceFee():number{
+    return this.itemPrice * 0.1;
+  }
+
+  
+
+  get discount(): number{
+    let total: number = this.itemPrice + this.serviceFee;
+    let discount: number = 0;
+    if (total >= 40){
+      discount = total * 0.15;
+    }
+    return discount;
+  }
+  
+
+  get totalPrice (): number{
+    return (this.itemPrice + this.serviceFee);
+  }
+
+  roundTo (num: number, places: number) {
+    const factor = 10 ** places;
+    return Math.round(num * factor) / factor;
+  };
+
   clearCart() {
     window.alert('Your cart has been cleared');
     this.items = this.cartService.clearCart();
@@ -31,6 +64,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.cartService.getItems();
+    
   }
 
 }

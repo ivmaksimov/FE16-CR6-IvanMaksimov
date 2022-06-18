@@ -14,9 +14,7 @@ export class CartService {
     this.items.push(dish);
   }
 
-  showsmth(){
-    console.log("hihihi");
-  }
+
 
   getItems() {
     return this.items;
